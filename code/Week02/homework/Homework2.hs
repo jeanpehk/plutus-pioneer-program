@@ -1,16 +1,15 @@
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE DataKinds           #-}
+{-# LANGUAGE DeriveAnyClass      #-}
+{-# LANGUAGE DeriveGeneric       #-}
 {-# LANGUAGE ImportQualifiedPost #-}
-{-# LANGUAGE DeriveAnyClass #-}
-{-# LANGUAGE DeriveGeneric  #-}
-
+{-# LANGUAGE NoImplicitPrelude   #-}
+{-# LANGUAGE TemplateHaskell     #-}
 
 module Homework2 where
 
 import Plutus.V2.Ledger.Api qualified as PlutusV2
-import PlutusTx
-import PlutusTx.Prelude
+import           PlutusTx             (compile, unstableMakeIsData)
+import           PlutusTx.Prelude     (Bool, BuiltinData, (/=))
 import Utilities (wrap)
 
 ---------------------------------------------------------------------------------------------------
